@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gh-jenkins-artifactory-go-bvnvwcxt-gitops
+  description: This is GitOps manifest for gh-jenkins-artifactory-go-bvnvwcxt   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=gh-jenkins-artifactory-go-bvnvwcxt
+    backstage.io/kubernetes-id: gh-jenkins-artifactory-go-bvnvwcxt 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: gh-jenkins-artifactory-go-bvnvwcxt-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gh-jenkins-artifactory-go-bvnvwcxt
